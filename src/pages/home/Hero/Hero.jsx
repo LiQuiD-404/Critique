@@ -9,7 +9,7 @@ import Img from "../../../components/LazyImageLoader/Img";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 
 const HeroBanner = () => {
-    const [background, setBackground] = useState("iiXliCeykkzmJ0Eg9RYJ7F2CWSz.jpg");
+    const [background, setBackground] = useState("https://image.tmdb.org/t/p/original/f33XdT6dwNXmXQNvQ4FuyhQrUob.jpg");
     const [query, setQuery] = useState("");
     const navigate = useNavigate();
     const { url } = useSelector((state) => state.home);
@@ -19,7 +19,9 @@ const HeroBanner = () => {
         const bg =
             url.backdrop +
             data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
-        setBackground(bg);
+            if(url.backdrop !== undefined){
+                setBackground(bg);
+            }
     }, [data]);
 
     const searchQueryHandler = (event) => {

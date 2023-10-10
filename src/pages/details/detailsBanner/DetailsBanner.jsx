@@ -147,7 +147,7 @@ const DetailsBanner = ({ video, crew }) => {
                                         {director?.length > 0 && (
                                             <div className="info">
                                                 <span className="text bold">
-                                                    Director:{" "}
+                                                    Director(s):{" "}
                                                 </span>
                                                 <span className="text">
                                                     {director?.map((d, i) => (
@@ -165,7 +165,7 @@ const DetailsBanner = ({ video, crew }) => {
                                         {writer?.length > 0 && (
                                             <div className="info">
                                                 <span className="text bold">
-                                                    Writer:{" "}
+                                                    Writer(s):{" "}
                                                 </span>
                                                 <span className="text">
                                                     {writer?.map((d, i) => (
